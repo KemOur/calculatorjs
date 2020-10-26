@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <script defer src="scripts.js"></script>
+    <style>
+      .error,
+      .results {
+        display: none;
+      }
+
+      .error {
+        background-color: red;
+        color: white;
+        padding: 2em;
+        text-align: center;
+      }
+
+      .results {
+        background-color: green;
+        color: white;
+        padding: 2em;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container my-5">
+      <h1 class="mb-5">JS calculator</h1>
+      <form>
+        <div class="mb-3">
+          <label for="number1" class="form-label">Number 1</label>
+          <input type="text" class="form-control" id="number1" />
+        </div>
+        <div class="mb-3">
+          <select class="form-select" id="operation">
+            <option selected disabled value="">Select an operation...</option>
+            <option value="+">Addition</option>
+            <option value="*">Multiplication</option>
+            <option value="-">Substraction</option>
+            <option value="/">Division</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="number2" class="form-label">Number 2</label>
+          <input type="text" class="form-control" id="number2" />
+        </div>
+        <button type="submit" class="btn btn-primary">Calculate</button>
+        <a href="#" id="reset" class="btn btn-secondary">Reset</a>
+      </form>
+
+      <div class="error mt-5"></div>
+
+      <div class="results mt-5">
+        <p>Résultat : <span id="results"></span></p>
+      </div>
+    </div>
+  </body>
+</html>
