@@ -13,7 +13,7 @@ function displayResult(results) {
 }
 
 // Reset
-document.querySelector("#reset").addEventListener("click", function () {
+  document.querySelector("#reset").addEventListener("click", function () {
   document.querySelector("form").reset();
   document.querySelector(".error").style.display = "none";
   document.querySelector(".results").style.display = "none";
@@ -64,7 +64,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
       results = number1 * number2;
       break;
     case "/":
-      if (number2 == 0) {
+      if (number2 === 0) {
         displayError("Erreur : la division par zéro");
         return;
       }
